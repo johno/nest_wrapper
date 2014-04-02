@@ -10,7 +10,7 @@ module NestWrapper
   end
 
   def self.login(email, password)
-    self.nest   = NestThermostat::Nest.new({ email: email, password: password })
+    self.nest = NestThermostat::Nest.new({ email: email, password: password })
   end
 
   def self.set_status
