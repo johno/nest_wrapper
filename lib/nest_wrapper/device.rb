@@ -1,6 +1,6 @@
 module NestWrapper
   class Device
-    attr_accessor :name, :zip, :country. :state
+    attr_accessor :name, :zip, :country, :state
 
     def initialize(status)
       self.name         = NestWrapper.nest.status['structure'][NestWrapper.nest.status['structure'].keys.first]['name']
