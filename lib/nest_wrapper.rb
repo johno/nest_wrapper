@@ -11,9 +11,9 @@ module NestWrapper
   end
 
   def self.login(email, password)
-    self.nest = NestThermostat::Nest.new({ email: email, password: password })
-
-    self.status = nest.status if nest
+    self.nest   = NestThermostat::Nest.new({ email: email, password: password })
     self.device = NestWrapper::Device.new(status) if status
   end
+
+  delegate :status, to: :nest
 end
