@@ -13,12 +13,7 @@ module NestWrapper
   def self.login(email, password)
     self.nest = NestThermostat::Nest.new({ email: email, password: password })
 
-    set_status
-
-    self.device = NestWrapper::Device.new(status)
-  end
-
-  def self.set_status
     self.status = nest.status if nest
+    self.device = NestWrapper::Device.new(status) if status
   end
 end
