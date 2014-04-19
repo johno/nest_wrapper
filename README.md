@@ -6,15 +6,21 @@ A wrapper for the `nest_thermostat` gem. So, a wrapper that wraps a wrapper.
 
 Add this line to your application's Gemfile:
 
-    gem 'nest_wrapper'
+```ruby
+gem 'nest_wrapper'
+```
 
 And then execute:
 
-    $ bundle
+```bash
+$ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install nest_wrapper
+```bash
+$ gem install nest_wrapper
+```
 
 ## Usage
 
