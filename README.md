@@ -18,7 +18,34 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Login to the API with your credentials:
+
+```ruby
+NestWrapper.login ENV['NEST_EMAIL'], ENV['NEST_PASSWORD']
+```
+
+### Get status information:
+
+```ruby
+state = NestWrapper.device.state
+state.temp      # => 'Set Temperature'
+state.curr_temp # => 'Current Temperature'
+state.away      # => true || false
+state.leaf      # => true || false
+state.humidity  # => 'Humidity'
+
+# etc.
+```
+
+### Get device information:
+
+```ruby
+device = NestWrapper.device
+device.name        # => 'Name of nest device'
+device.zip         # => 'ZIP'
+device.country     # => 'COUNTRY'
+device.config_data # => { blob: :of_data }
+```
 
 ## Contributing
 
